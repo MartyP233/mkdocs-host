@@ -38,4 +38,3 @@ jobs:
           app_location: "docs"       # Location of mkdocs.yml
           output_location: "site" # MkDocs output directory
           api_location: ""        # No API
-          github_id_token: ${{ secrets.GITHUB_TOKEN }}
