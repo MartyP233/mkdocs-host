@@ -2,8 +2,18 @@
     "routes": [
         {
             "route": "/*",
-            "redirect": "/.auth/login/aad",
-            "statusCode": 302
+            "allowedRoles": [
+                "authenticated"
+            ]
         }
-    ]
+    ],
+    "auth": {
+        "identityProviders": {
+            "azureActiveDirectory": {
+                "registration": {
+                    "openIdIssuer": "https://login.microsoftonline.com/cdb5885e-a636-44b9-94da-82930c096dd6/v2.0"
+                }
+            }
+        }
+    }
 }
